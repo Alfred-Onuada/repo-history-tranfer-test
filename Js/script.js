@@ -244,7 +244,7 @@ if (signUpForm != undefined && signUpForm != null) {
                         signUpForm.reset();
 
                         // redirect to maybe another page, the _self means open in current tab
-                        openUrl('index.html');
+                        openUrl('../index.html');
 
                     })
                     .catch(err => {
@@ -303,7 +303,7 @@ if (logInForm != undefined && logInForm != null) {
                 // var email = userObject.email;
 
                 // redirect to maybe another page, the _self means open in current tab
-                openUrl('index.html');
+                openUrl('../index.html');
 
             })
             .catch(err => {
@@ -348,7 +348,7 @@ function checkCurrentUser() {
 
         } else {
             
-            openUrl('login.html');
+            openUrl('../pages/login.html');
             
         }
 
@@ -631,7 +631,7 @@ function submitExam() {
                                 //     }
                                 // }
                                 
-                                openUrl('history.html')
+                                openUrl('../pages/history.html')
                             })
                             .catch(err => {
                                 if (err) {
@@ -648,7 +648,7 @@ function submitExam() {
     
             } else {
                 
-                openUrl('login.html');
+                openUrl('../pages/login.html');
                 
             }
     
@@ -708,7 +708,7 @@ function getExams() {
     var time = document.querySelector('#timer');
 
     if (subject == null) {
-        openUrl('selection.html');
+        openUrl('../pages/selection.html');
     }
 
     // baseURL = https://questions.aloc.ng/api/v2/
@@ -766,9 +766,9 @@ function getExams() {
                             </form>
                             <br>
 
-                            <div class="btns row">
-                                <h4 onclick="prevQuestion(${index})" class="examA">Previous</h4>
-                                <h4 onclick="nextQuestion(${index})" class="examA">Next</h4>
+                            <div class="w-50">
+                                <a onclick="prevQuestion(${index})" class="examA btn btn-outline-danger">Previous</a>
+                                <a onclick="nextQuestion(${index})" class="examA btn btn-outline-success">Next</a>
                             </div>
                         </div>
                     `;
@@ -862,7 +862,7 @@ function getHistory() {
                                     <div>
                                         <h4 class="AIsuggest">${data[index].AI_suggestions}</h4>
                                     </div>
-                                    <button class="takeExam" onclick="openUrl('exam.html?subject=${data[index].examName}')">Try an Exam</button>
+                                    <button class="takeExam" onclick="openUrl('../pages/exam.html?subject=${data[index].examName}')">Try an Exam</button>
                                 </div>        
 
                             `;
@@ -880,7 +880,7 @@ function getHistory() {
                 })
 
         } else {
-            openUrl('register.html')
+            openUrl('../pages/register.html')
         }
     })
 

@@ -11,20 +11,13 @@
     padding: 0px 50px !important;
 }
 
-.navigbar{
-    height: 75px;
-    width: 100%;
-    background-color: white;
-    border-bottom: lavender 1px solid;
-    box-shadow: 0px 0px 5px lavender;
-    padding: 25px 0px;
-    
-    top: 0;
+.btn.blank{
+    background-color: rgb(216, 146, 216);
+    color: white;
 }
 
-.navLinks{
-    float: left;
-    margin-top: -4px;
+.btn-outline-secondary:hover{
+    background-color: rgb(216, 146, 216);
 }
 
 .linkForm{
@@ -40,22 +33,10 @@
     color: white;
 }
 
-.navAcc{
-    clear: right;
-    text-align: right;
-    margin-right: 20px;
-}
-
-.navlink{
-    color: black;
-    text-decoration: none;
-    padding: 0px 20px;
-}
-
 .navheader{
     font-weight: 600;
     font-size: 20px;
-    padding-right: 55px !important;
+    padding: 15px;
     text-decoration: underline;
     text-decoration-color: rgb(216, 146, 216);
     text-decoration-thickness: 3px;
@@ -64,7 +45,7 @@
 .row{
     width: 100%;
     display: flex;
-    padding: 10px;
+    padding: 20px;
     place-items: center;
 }
 
@@ -78,13 +59,7 @@
 }
 
 .welcomeText{
-    margin-bottom: 25px;
     font-size: 20px;
-}
-
-.secondSec{
-    width: 70%;
-    margin: 0px;
 }
 
 .Secp{
@@ -102,25 +77,6 @@
     margin: 30px 0px;
     text-align: center;
     padding: 10px 40px;
-}
-
-.btn{
-    margin: 25px 0px;
-    background-color: rgb(216, 146, 216);
-    border: 0px;
-    height: 40px;
-    width: 150px;
-    font-size: 15px;
-    border-radius: 5px;
-}
-
-.btn >a{
-    text-decoration: none;
-    color: black;
-}
-
-.btn:hover{
-    opacity: .7;
 }
 
 .topText{
@@ -145,7 +101,7 @@
 .subImg{
     height: 80px;
     width: 80px;
-    margin:  0px 20px 0px 0px;
+    margin: 0px 20px 0px 0px;
 }
 
 .subRow{
@@ -157,67 +113,6 @@
     font-weight: normal;
 }
 
-.btnExamSelection{
-    height: fit-content;
-    width: fit-content;
-    padding: 10px;
-    border-radius: 5px;
-    border-color: rgb(216, 146, 216);
-    background-color: white;
-    border-width: 1px;
-}
-
-.btnExamSelection:hover{
-    background-color: rgb(216, 146, 216);
-    border-width: 1px;
-    color: white;
-}
-
-.aboutUsHead{
-    margin: 30px 0px;
-}
-
-.aboutUsHead > h1, .aboutUsHead > p{
-    font-weight: 400;
-}
-
-.aboutUscontainer{
-    height: fit-content;
-    width: 100%;
-    padding: 0px 0px 30px 0px;
-    position: relative;
-    overflow: hidden;
-    -webkit-transform: translate3d(0, 0, 0);
-}
-
-.fade {
-    -webkit-animation-name: fade;
-    -webkit-animation-duration: 4.5s;
-    animation-name: fade;
-    animation-duration: 4.5s;
-}
-
-@-webkit-keyframes fade {
-    from {
-        opacity: .4
-    } 
-    to {
-        opacity: 1
-    }
-}
-
-@keyframes fade {
-    from {
-        opacity: .4
-    } 
-    to {
-        opacity: 1
-    }
-}
-
-.sliderBody{
-    display: flex;
-}
 
 .eachDev{
     height: fit-content;
@@ -225,32 +120,15 @@
     text-align: center;
 }
 
-.devImgDiv{
-    width: 100vw;
-}
 
 .devImg{
     height: 200px;
     width: 175px;
 }
 
-.devDetails{
-    font-weight: 400;
-    line-height: 1.5;
-    padding: 0px 10px;
-    margin: 0px 0px 10px 0px;
-}
-
 .devName{
-    font-weight: 600;
-    font-size: 20px;
-    color: black;
-    margin: 0px 0px 0px 0px;
-}
-
-.devStack{
-    color: #686666;
-    margin: 0px 0px 10px 0px;
+    font-size: 22px;
+    color: rgb(155, 18, 155);
 }
 
 .socialIcons i{
@@ -318,18 +196,6 @@
     margin-right: 16rem;
 }
 
-.inputForm{
-    height: 2rem;
-    width: 17rem;
-    border-color: rgb(216, 146, 216);
-    border-style: groove;
-    border-radius: 5px;
-}
-
-.inputForm:focus-visible{
-    border-color: rgb(216, 146, 216);
-}
-
 .input-icons i {
     position: absolute;
 }
@@ -348,40 +214,6 @@
     width: 100%;
     padding: 0px 0px 0px 40px;
     height: 40px;
-}
-
-.btnForm, .btnCancel{
-    height: 2.5rem;
-    width: 5.5rem;
-    border-radius: 5px;
-    margin: 1rem 0 1rem;
-}
-
-.btnForm{
-    background-color: rgb(216, 146, 216);
-    border-style: none;
-    color: white;
-}
-
-.btnCancel{
-    background-color: white;
-    color: black;
-    border-style: thin !important;
-    border-color: rgb(216, 146, 216);
-}
-
-.btnCancel a{
-    color: black;
-    text-decoration: none;
-}
-
-.btnForm:hover{
-    background-color: rgb(224, 195, 224);
-    border: thick;
-}
-
-.btnForm a{
-    text-decoration: none;
 }
 
 .regForm{
@@ -413,6 +245,26 @@ select.regSelect{
     height: 2rem;
     margin: 0 5px 0 5px;
 }
+
+
+@media screen and (max-width: 610px) {
+    /* SELECTION */
+    .selectionContainer{
+        margin: 50px 0px;
+        padding: 20px 45px;
+        width: min-content;
+    }
+
+    .subName{font-size: 16px;}
+    .btn-outline-secondary{font-size: 14px;}
+}
+
+
+
+
+
+
+
 
 .hidden{
     visibility: hidden;
@@ -477,19 +329,6 @@ select.regSelect{
     margin: 0px 0px 10px 0px;
 }
 
-.btns{
-    width: 100%;
-    place-content: flex-end;
-}
-
-.examA{
-    padding: 0px 30px 0px 0px;
-}
-
-.examA:hover{
-    cursor: pointer;
-}
-
 #preloader{
     display: flex;
     place-content: center;
@@ -504,17 +343,14 @@ select.regSelect{
     background: rgb(216, 146, 216);
     color: white;
     float: right;
-    margin-right: 50px;
+    margin: 0 50px 20px 0;
 }
 
 .sExam:hover{
     opacity: .6;
     cursor: pointer;
 }
-.timer{
-    place-content: flex-end;
-    margin: 10px 0px 0px 0px;
-}
+
 
 .timerText{
     font-size: 25px;
@@ -613,18 +449,4 @@ select.regSelect{
     background-color: rgb(216, 146, 216) !important;
     color: white;
     cursor: pointer;
-}
-
-.modal {
-    display: none;
-    place-content: center;
-    place-items: center;
-    position: fixed;
-    z-index: 1; 
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0,0,0,0.4);
 }

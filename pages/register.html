@@ -5,7 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>ExamPadii | Sign Up</title>
         <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-        <link rel="stylesheet" href="./css/main.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+        <link rel="stylesheet" href="../css/main.css">
     </head>
     <body class="formBody">
 
@@ -19,7 +20,7 @@
                             <td>First Name</td>
                             <td class="input-icons">
                                 <i class="fas fa-user regIcon" style="color: rgb(216, 146, 216);"></i>
-                                <input class="regInput input-field" type="text" name="FirstName" maxlength="50" placeholder="David" required/>
+                                <input class="regInput input-field form-control" type="text" name="FirstName" maxlength="50" placeholder="David" required/>
                             </td>
                         </tr>
 
@@ -27,7 +28,7 @@
                             <td>Last Name</td>
                             <td class="input-icons">
                                 <i class="fas fa-user regIcon" style="color: rgb(216, 146, 216);"></i>
-                                <input class="regInput input-field" type="text" name="LastName" maxlength="50" placeholder="Fola" required/>
+                                <input class="regInput input-field form-control" type="text" name="LastName" maxlength="50" placeholder="Fola" required/>
                             </td>
                         </tr>
 
@@ -35,7 +36,7 @@
                             <td>Email: </td>
                             <td class="input-icons">
                                 <i class="fas fa-envelope regIcon" style="color: rgb(216, 146, 216);"></i>
-                                <input class="regInput input-field" type="email" name="EmailID" maxlength="100" placeholder="@gmail.com" required/>
+                                <input class="regInput input-field form-control" type="email" name="EmailID" maxlength="100" placeholder="@gmail.com" required/>
                             </td>
                         </tr>
 
@@ -43,7 +44,7 @@
                             <td>Mobile Number</td>
                             <td class="input-icons">
                                 <i class="fas fa-address-card regIcon" style="color: rgb(216, 146, 216);"></i>
-                                <input class="regInput input-field" type="text" name="MobileNumber" maxlength="14" placeholder="+234 XXX XXX XXXX" required/>
+                                <input class="regInput input-field form-control" type="text" name="MobileNumber" maxlength="14" placeholder="+234 XXX XXX XXXX" required/>
                             </td>
                         </tr>
 
@@ -51,7 +52,7 @@
                             <td>Password</td>
                             <td class="input-icons">
                                 <i class="fas fa-lock regIcon" style="color: rgb(216, 146, 216);"></i>
-                                <input class="regInput input-field" type="password" name="Password" placeholder="********" required/>
+                                <input class="regInput input-field form-control" type="password" name="Password" placeholder="********" required/>
                             </td>
                         </tr>
 
@@ -59,7 +60,7 @@
                             <td>Confirm Password</td>
                             <td class="input-icons">
                                 <i class="fas fa-lock regIcon" style="color: rgb(216, 146, 216);"></i>
-                                <input class="regInput input-field" type="password" name="ConfirmPassword" placeholder="********" required/>
+                                <input class="regInput input-field form-control" type="password" name="ConfirmPassword" placeholder="********" required/>
                             </td>
                         </tr>
 
@@ -182,9 +183,9 @@
 
                         <tr>
                             <td colspan="2" align="center">
-                                <button class="btnCancel"><a href="index.html">Go Back</a></button>
-                                <button class="btnForm" type="submit">Submit</button> <br>
-                                Already have an account? <a href="login.html" style="text-decoration: none;">Login now</a>
+                                <a href="../index.html" class="btn btn-outline-danger my-3">Go Back</a>
+                                <button class="btn blank" type="submit">Submit</button> <br>
+                                Already have an account? <a href="./login.html" style="text-decoration: none;">Login now</a>
                             </td>
                         </tr>
 
@@ -204,7 +205,7 @@
         <script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-database.js"></script>
 
         <!-- Personal Js  #### Has to come last or at least after firebase -->
-        <script src="./Js/script.js"></script>
+        <script src="../Js/script.js"></script>
 
     </body>
 </html>
