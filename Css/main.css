@@ -257,6 +257,12 @@ select.regSelect{
 
     .subName{font-size: 16px;}
     .btn-outline-secondary{font-size: 14px;}
+
+    /* INDEX */
+    .Oneimg{
+        width: 100%;
+        height: 300px;
+    }
 }
 
 
