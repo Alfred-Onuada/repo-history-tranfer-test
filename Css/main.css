@@ -11,6 +11,7 @@
     padding: 0px 50px !important;
 }
 
+<<<<<<< HEAD
 .navigbar{
     height: 75px;
     width: 100%;
@@ -25,6 +26,15 @@
 .navLinks{
     float: left;
     margin-top: -4px;
+=======
+.btn.blank{
+    background-color: rgb(216, 146, 216);
+    color: white;
+}
+
+.btn-outline-secondary:hover{
+    background-color: rgb(216, 146, 216);
+>>>>>>> a3872272e20d38c92c7b3be18fbf65eb93bd05c8
 }
 
 .linkForm{
@@ -40,6 +50,7 @@
     color: white;
 }
 
+<<<<<<< HEAD
 .navAcc{
     clear: right;
     text-align: right;
@@ -56,6 +67,12 @@
     font-weight: 600;
     font-size: 20px;
     padding-right: 55px !important;
+=======
+.navheader{
+    font-weight: 600;
+    font-size: 20px;
+    padding: 15px;
+>>>>>>> a3872272e20d38c92c7b3be18fbf65eb93bd05c8
     text-decoration: underline;
     text-decoration-color: rgb(216, 146, 216);
     text-decoration-thickness: 3px;
@@ -64,7 +81,11 @@
 .row{
     width: 100%;
     display: flex;
+<<<<<<< HEAD
     padding: 10px;
+=======
+    padding: 20px;
+>>>>>>> a3872272e20d38c92c7b3be18fbf65eb93bd05c8
     place-items: center;
 }
 
@@ -78,6 +99,7 @@
 }
 
 .welcomeText{
+<<<<<<< HEAD
     margin-bottom: 25px;
     font-size: 20px;
 }
@@ -87,6 +109,11 @@
     margin: 0px;
 }
 
+=======
+    font-size: 20px;
+}
+
+>>>>>>> a3872272e20d38c92c7b3be18fbf65eb93bd05c8
 .Secp{
     line-height: 1.5;
 }
@@ -104,6 +131,7 @@
     padding: 10px 40px;
 }
 
+<<<<<<< HEAD
 .btn{
     margin: 25px 0px;
     background-color: rgb(216, 146, 216);
@@ -123,6 +151,8 @@
     opacity: .7;
 }
 
+=======
+>>>>>>> a3872272e20d38c92c7b3be18fbf65eb93bd05c8
 .topText{
     margin: 30px 0px 0px 0px;
 }
@@ -145,7 +175,11 @@
 .subImg{
     height: 80px;
     width: 80px;
+<<<<<<< HEAD
     margin:  0px 20px 0px 0px;
+=======
+    margin: 0px 20px 0px 0px;
+>>>>>>> a3872272e20d38c92c7b3be18fbf65eb93bd05c8
 }
 
 .subRow{
@@ -157,6 +191,7 @@
     font-weight: normal;
 }
 
+<<<<<<< HEAD
 .btnExamSelection{
     height: fit-content;
     width: fit-content;
@@ -218,6 +253,8 @@
 .sliderBody{
     display: flex;
 }
+=======
+>>>>>>> a3872272e20d38c92c7b3be18fbf65eb93bd05c8
 
 .eachDev{
     height: fit-content;
@@ -225,15 +262,19 @@
     text-align: center;
 }
 
+<<<<<<< HEAD
 .devImgDiv{
     width: 100vw;
 }
+=======
+>>>>>>> a3872272e20d38c92c7b3be18fbf65eb93bd05c8
 
 .devImg{
     height: 200px;
     width: 175px;
 }
 
+<<<<<<< HEAD
 .devDetails{
     font-weight: 400;
     line-height: 1.5;
@@ -251,6 +292,11 @@
 .devStack{
     color: #686666;
     margin: 0px 0px 10px 0px;
+=======
+.devName{
+    font-size: 22px;
+    color: rgb(155, 18, 155);
+>>>>>>> a3872272e20d38c92c7b3be18fbf65eb93bd05c8
 }
 
 .socialIcons i{
@@ -318,6 +364,7 @@
     margin-right: 16rem;
 }
 
+<<<<<<< HEAD
 .inputForm{
     height: 2rem;
     width: 17rem;
@@ -330,6 +377,8 @@
     border-color: rgb(216, 146, 216);
 }
 
+=======
+>>>>>>> a3872272e20d38c92c7b3be18fbf65eb93bd05c8
 .input-icons i {
     position: absolute;
 }
@@ -350,6 +399,7 @@
     height: 40px;
 }
 
+<<<<<<< HEAD
 .btnForm, .btnCancel{
     height: 2.5rem;
     width: 5.5rem;
@@ -384,6 +434,8 @@
     text-decoration: none;
 }
 
+=======
+>>>>>>> a3872272e20d38c92c7b3be18fbf65eb93bd05c8
 .regForm{
     margin: 7rem 0rem 7rem 0rem;
     padding: 2rem 0 2rem;
@@ -414,6 +466,35 @@ select.regSelect{
     margin: 0 5px 0 5px;
 }
 
+<<<<<<< HEAD
+=======
+
+@media screen and (max-width: 610px) {
+    /* SELECTION */
+    .selectionContainer{
+        margin: 50px 0px;
+        padding: 20px 45px;
+        width: min-content;
+    }
+
+    .subName{font-size: 16px;}
+    .btn-outline-secondary{font-size: 14px;}
+
+    /* INDEX */
+    .Oneimg{
+        width: 100%;
+        height: 300px;
+    }
+}
+
+
+
+
+
+
+
+
+>>>>>>> a3872272e20d38c92c7b3be18fbf65eb93bd05c8
 .hidden{
     visibility: hidden;
 }
@@ -477,6 +558,7 @@ select.regSelect{
     margin: 0px 0px 10px 0px;
 }
 
+<<<<<<< HEAD
 .btns{
     width: 100%;
     place-content: flex-end;
@@ -490,6 +572,8 @@ select.regSelect{
     cursor: pointer;
 }
 
+=======
+>>>>>>> a3872272e20d38c92c7b3be18fbf65eb93bd05c8
 #preloader{
     display: flex;
     place-content: center;
@@ -504,6 +588,7 @@ select.regSelect{
     background: rgb(216, 146, 216);
     color: white;
     float: right;
+<<<<<<< HEAD
     margin-right: 50px;
 }
 
@@ -512,16 +597,23 @@ select.regSelect{
     width: 100%;
     font-style: italic;
     font-size: 15px;
+=======
+    margin: 0 50px 20px 0;
+>>>>>>> a3872272e20d38c92c7b3be18fbf65eb93bd05c8
 }
 
 .sExam:hover{
     opacity: .6;
     cursor: pointer;
 }
+<<<<<<< HEAD
 .timer{
     place-content: flex-end;
     margin: 10px 0px 0px 0px;
 }
+=======
+
+>>>>>>> a3872272e20d38c92c7b3be18fbf65eb93bd05c8
 
 .timerText{
     font-size: 25px;
@@ -620,6 +712,7 @@ select.regSelect{
     background-color: rgb(216, 146, 216) !important;
     color: white;
     cursor: pointer;
+<<<<<<< HEAD
 }
 
 .modal {
@@ -775,4 +868,6 @@ footer {
     display: flex;
     place-content: center;
     place-items: center;
+=======
+>>>>>>> a3872272e20d38c92c7b3be18fbf65eb93bd05c8
 }
