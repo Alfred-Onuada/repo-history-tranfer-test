@@ -159,6 +159,7 @@ if (signUpForm != undefined && signUpForm != null) {
     var gender = signUpForm.elements['Gender'];
     var password = signUpForm.elements['Password'];
     var confirmPassword = signUpForm.elements['ConfirmPassword'];
+    var submitBtn = document.querySelector("#submitBtn")
 
     // to store timeout event
     var timeout;
@@ -192,6 +193,9 @@ if (signUpForm != undefined && signUpForm != null) {
     signUpForm.onsubmit = (e) => {
         e.preventDefault();
 
+        submitBtn.textContent = "Processing...";
+        submitBtn.disabled = true;
+
         var dateOfBirth = signUpForm.elements['BirthDay'].value.toString() + '-' + signUpForm.elements['BirthdayMonth'].value.toString() + '-' + signUpForm.elements['BirthdayYear'].value.toString();
 
         var data = { 'email': email.value, 'password': password.value, 'confirmPassword': confirmPassword.value };
@@ -199,7 +203,14 @@ if (signUpForm != undefined && signUpForm != null) {
         err = validate(data);
 
         if (err) {
-            console.log(err.errorCode + ": " + err.errorMessage);
+            alert(err.errorCode + ": " + err.errorMessage);
+
+            submitBtn.textContent = "Failed";
+
+            setTimeout(() => {
+                submitBtn.textContent = "Submit"
+            }, 2500)
+            submitBtn.disabled = false;
 
             return;
         }
@@ -225,7 +236,14 @@ if (signUpForm != undefined && signUpForm != null) {
                     dob: dateOfBirth, // compulsory to put this ending comma
                 }, err => {
                     if (err) {
-                        window.alert(err);
+                        alert(err);
+
+                        submitBtn.textContent = "Failed";
+
+                        setTimeout(() => {
+                            submitBtn.textContent = "Submit"
+                        }, 2500)
+                        submitBtn.disabled = false;
 
                         // this deletes the entry form that was just made incase of an error
                         auth.currentUser.delete();
@@ -239,17 +257,31 @@ if (signUpForm != undefined && signUpForm != null) {
 
                         // figure out how to change password later
 
-                        window.alert("User Created Successfully");
+                        alert("User Created Successfully");
+
+                        submitBtn.textContent = "Success";
+
+                        setTimeout(() => {
+                            submitBtn.textContent = "Submit"
+                        }, 2500)
+                        submitBtn.disabled = false;
 
                         signUpForm.reset();
 
                         // redirect to maybe another page, the _self means open in current tab
-                        openUrl('../index.html');
+                        openUrl('index.html');
 
                     })
                     .catch(err => {
                         if (err) {
-                            console.log(err) 
+                            alert(err) 
+
+                            submitBtn.textContent = "Failed";
+
+                            setTimeout(() => {
+                                submitBtn.textContent = "Submit"
+                            }, 2500)
+                            submitBtn.disabled = false;
                         }
                     })
 
@@ -258,7 +290,7 @@ if (signUpForm != undefined && signUpForm != null) {
                 var errorCode = err.code;
                 var errorMessage = err.message;
 
-                window.alert(errorCode + ": " + errorMessage);
+                alert(errorCode + ": " + errorMessage);
             })
 
     }
@@ -275,16 +307,28 @@ if (logInForm != undefined && logInForm != null) {
     // get values of inputs from form
     var email = logInForm.elements["emailInput"];
     var password = logInForm.elements["passwordInput"];
+    var loginBtn = document.querySelector("#loginBtn")
 
     logInForm.onsubmit = (e) => {
         e.preventDefault();
+
+        loginBtn.textContent = "Processing...";
+        loginBtn.disabled = true;
 
         var data = { 'email': email.value, 'password': password.value }
 
         err = validate(data)
 
         if (err) {
-            console.log(err.errorCode + ": " + err.errorMessage);
+            alert(err.errorCode + ": " + err.errorMessage);
+
+            loginBtn.textContent = "Failed";
+
+            setTimeout(() => {
+                loginBtn.textContent = "Login";
+            }, 2500)
+            
+            loginBtn.disabled = false;
 
             return;
         }
@@ -296,6 +340,9 @@ if (logInForm != undefined && logInForm != null) {
 
                 console.log("User Logged In Successfully");
 
+                loginBtn.textContent = "Success";
+                loginBtn.disabled = false;
+
                 // some basic info you might need for additional info log the userObject to the console
                 // var userId = userObject.uid;
                 // var displayPhoto = userObject.photoURL;
@@ -303,7 +350,7 @@ if (logInForm != undefined && logInForm != null) {
                 // var email = userObject.email;
 
                 // redirect to maybe another page, the _self means open in current tab
-                openUrl('../index.html');
+                openUrl('index.html');
 
             })
             .catch(err => {
@@ -311,7 +358,15 @@ if (logInForm != undefined && logInForm != null) {
                 var errorMessage = err.message;
 
                 // debugging purposes
-                console.log(errorCode + ": " + errorMessage);
+                alert(errorCode + ": " + errorMessage);
+
+                loginBtn.textContent = "Failed";
+
+                setTimeout(() => {
+                    loginBtn.textContent = "Login";
+                }, 2500)
+
+                loginBtn.disabled = false;
             })
 
     }
@@ -348,7 +403,7 @@ function checkCurrentUser() {
 
         } else {
             
-            openUrl('../pages/login.html');
+            openUrl('login.html');
             
         }
 
@@ -369,6 +424,8 @@ function parseUrl(params) {
 // Exam's page logic
 var selectedAnswers = {};
 var correctAnswers = {};
+var hasUsedHints = {};
+
 function nextQuestion(cid) {
     
     if (cid == 39) {
@@ -377,6 +434,9 @@ function nextQuestion(cid) {
         
         selectedOption = document.querySelector('#formfor'+cid).elements['ans'].value;
         selectedAnswers[cid] = selectedOption;
+
+        hintValue = document.querySelector("#formfor"+cid).elements['hint'].value;
+        hasUsedHints[cid] = hintValue;
 
         var nextQuestion = cid + 1;
         
@@ -403,6 +463,9 @@ function prevQuestion(cid) {
         
         selectedOption = document.querySelector('#formfor'+cid).elements['ans'].value;
         selectedAnswers[cid] = selectedOption;
+
+        hintValue = document.querySelector("#formfor"+cid).elements['hint'].value;
+        hasUsedHints[cid] = hintValue;
 
         var prevQuestion = cid - 1;
         
@@ -433,6 +496,9 @@ function jumpTo(qid) {
             selectedOption = document.querySelector('#formfor'+index).elements['ans'].value;
             selectedAnswers[index] = selectedOption;
 
+            hintValue = document.querySelector("#formfor"+index).elements['hint'].value;
+            hasUsedHints[index] = hintValue;
+
             element.classList.add('hide');
 
             if (selectedAnswers[index] != '') {
@@ -446,6 +512,60 @@ function jumpTo(qid) {
 
     // make new element visible
     document.querySelector('#q'+qid).classList.remove('hide');
+
+}
+
+function showHint(index, instance) {
+    var hintInput = document.querySelector("#hintInput"+index);
+    var hintDiv = document.querySelector("#hintDiv"+index);
+    var questionDiv = document.querySelector("#question"+index);
+    var questionText = questionDiv.textContent.replace(questionDiv.children[0].textContent, '')
+
+    let data = {
+        prompt: questionText,
+        max_tokens: 100,
+        temperature: 1
+    }
+
+    // has already used hint
+    if (hintDiv.classList.contains("hide") == false) {
+        return;
+    }
+
+    instance.textContent = "Getting hint...";
+    instance.style.opacity = .7;
+    hintInput.value = true;
+
+    const xhr =  new XMLHttpRequest()
+    xhr.open("POST", "https://api.openai.com/v1/engines/davinci/completions")
+    xhr.setRequestHeader("content-type", "application/json")
+    xhr.setRequestHeader("Authorization", "Bearer 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")
+    
+    xhr.onreadystatechange = function () {
+        if (this.readyState === 4) {
+            if (this.status === 200) {
+                var hint = JSON.parse(this.responseText).choices[0].text;
+
+                var hfirst = document.createElement("h4");
+                hfirst.textContent = "Disclaimer: the provided answers may or may not be a useful hint as this services is a third-party service."
+                hfirst.style.fontWeight = 400;
+                hintDiv.appendChild(hfirst);
+
+                var hsecond = document.createElement("h4");
+                hsecond.textContent = hint;
+                hsecond.style.fontWeight = 400;
+                hintDiv.appendChild(hsecond);
+
+                hintDiv.classList.remove('hide');
+            }
+
+            instance.textContent = "Show Hint";
+            instance.style.opacity = 1;
+
+        }
+    }
+    xhr.send(JSON.stringify(data))
+    
 
 }
 
@@ -474,6 +594,9 @@ function submitExam() {
             selectedOption = document.querySelector('#formfor'+index).elements['ans'].value;
             selectedAnswers[index] = selectedOption;
 
+            hintValue = document.querySelector("#formfor"+index).elements['hint'].value;
+            hasUsedHints[index] = hintValue;
+
             if (selectedAnswers[index] != '') {
                 // add green background
                 document.querySelector('#qNoBtn'+index).classList.add('answered');
@@ -497,6 +620,18 @@ function submitExam() {
         }
     }
 
+    var hintUsed = 0;
+    for (let index = 0; index < Object.keys(hasUsedHints).length; index++) {
+        const usedHint = hasUsedHints[index];
+
+        if (usedHint) {
+            hintUsed += 1;
+        }
+        
+    }
+
+    var ratioOfHintsUsed = (hintUsed / 40);
+
     var time = document.querySelector('#time').textContent;
     time = time.split(':');
 
@@ -510,6 +645,8 @@ function submitExam() {
     // you can use these values to say things like work on your speed or work on your accuracy
     var timeEfficiency = (remainingTime / Time) * 5; // on a scale of 5
     var accuracy = (score / Score) * 5; // on a scale of 5
+    var hintEfficiency = ratioOfHintsUsed * 5; // on a scale of 5
+
 
     // based on 40 questions
     // based on a 40 minutes exam
@@ -517,7 +654,9 @@ function submitExam() {
         timeEfficiency = 1; // just assigning it by default
     }
 
-    var finalResult = timeEfficiency + accuracy;
+    var finalResult = ((timeEfficiency + accuracy + hintEfficiency) / 15) * 100;
+
+    console.log(timeEfficiency, accuracy, hintEfficiency);
 
     // store scores on database
     var subject = parseUrl('subject');
@@ -525,16 +664,18 @@ function submitExam() {
     // add AI suggestions
     var suggestions;
 
-    if (finalResult >= 8.5) {
+    if (finalResult >= 85) {
         suggestions = `Good Job, ${subject} is your thing!🔥🔥`;
     } else {
 
         // the person probably rushed
-        if (timeEfficiency > accuracy && timeEfficiency > 3.5) {
+        if (timeEfficiency > accuracy && timeEfficiency > 35) {
             suggestions = 'Don\'t be in haste take your time.😉';
-        } else if (accuracy > timeEfficiency && accuracy > 3.5) {
+        } else if (accuracy > timeEfficiency && accuracy > 35) {
             // the person used too much time
             suggestions = `That was nice but you need to work on your speed`;
+        } else if (accuracy > 60 && hintEfficiency < 50) {
+            suggestions = `Good Job, but try to answer the questions yourself and limit the usage of the hint button.`
         } else {
             suggestions = `Try studying more and take another test, Good Luck.`;
         }
@@ -631,7 +772,7 @@ function submitExam() {
                                 //     }
                                 // }
                                 
-                                openUrl('../pages/history.html')
+                                openUrl('history.html')
                             })
                             .catch(err => {
                                 if (err) {
@@ -648,7 +789,7 @@ function submitExam() {
     
             } else {
                 
-                openUrl('../pages/login.html');
+                openUrl('login.html');
                 
             }
     
@@ -701,6 +842,7 @@ function getExams() {
     checkCurrentUser();
 
     var examBody = document.querySelector('#currentQuestion');
+    var preloader = document.querySelector("#preloader");
 
     // calls the function that parses and returns the match parameter
     var subject = parseUrl('subject');
@@ -708,7 +850,7 @@ function getExams() {
     var time = document.querySelector('#timer');
 
     if (subject == null) {
-        openUrl('../pages/selection.html');
+        openUrl('selection.html');
     }
 
     // baseURL = https://questions.aloc.ng/api/v2/
@@ -718,83 +860,94 @@ function getExams() {
     // the body of the response is a bit different, also the larger the questions the more time it will take but it typically takes a few seconds
 
     var xhr = new XMLHttpRequest();
-    xhr.open('GET', `https://questions.aloc.ng/api/v2/m?subject=${subject}`, true);
+    xhr.open('GET', `https://questions.aloc.com.ng/api/v2/m?subject=${subject}`, true);
     // specifies a bunch of additional header info
     xhr.setRequestHeader('Accept', 'application/json');
     xhr.setRequestHeader('Content-Type', 'application/json');
     xhr.setRequestHeader('AccessToken', 'ALOC-b34f725ffdb8b5a120c4');
     xhr.onreadystatechange = function () {
-        if (this.status == 200 && this.readyState == 4) {
-            
-            var data = JSON.parse(this.responseText);
+        if (this.readyState == 4) {
 
-            // checks if the returned data is correct
-            if (data.status == 200){
+            if (this.status == 200) {
 
-                var preloader = document.querySelector("#preloader");
-                preloader.classList.add("hide");
-
-                time.classList.remove('hide');
-                countDown();
-                // lol this is not wrong there is a data object in the first data object
-                data = data.data;
-
-                for (let index = 0; index < data.length; index++) {
-                    const q = data[index];
-
-                    correctAnswers[index] = q.answer;
-
-                    // question id will be sequential i will make it myself
-                    var newQuestion = `
-                        <div id="q${index}" class="examContainer hide" align="left">
-                            <p><small class="qNo">${index+1}</small>${q.question}</p>
-
-                            <form class="eForm"onsubmit="return False" id="formfor${index}">
-                                <!-- Make us of a loop incase options are more than four -->
-                                <input type="radio" name="ans" id="opta${index}" class="examRadio" value="a"> 
-                                <label for="opta${index}">${q.option.a}</label>
+                var data = JSON.parse(this.responseText);
+        
+                // checks if the returned data is correct
+                if (data.status == 200){
+        
+                    preloader.classList.add("hide");
+        
+                    time.classList.remove('hide');
+                    countDown();
+                    // lol this is not wrong there is a data object in the first data object
+                    data = data.data;
+        
+                    for (let index = 0; index < data.length; index++) {
+                        const q = data[index];
+        
+                        correctAnswers[index] = q.answer;
+        
+                        // question id will be sequential i will make it myself
+                        var newQuestion = `
+                            <div id="q${index}" class="examContainer hide" align="left">
+                                <p id="question${index}"><small class="qNo">${index+1}</small>${q.question}</p>
+        
+                                <form class="eForm"onsubmit="return False" id="formfor${index}">
+                                    <!-- Make us of a loop incase options are more than four -->
+                                    <input type="radio" name="ans" id="opta${index}" class="examRadio" value="a"> 
+                                    <label for="opta${index}">${q.option.a}</label>
+                                    <br>
+                                    <input type="radio" name="ans" id="optb${index}" class="examRadio" value="b"> 
+                                    <label for="optb${index}">${q.option.b}</label>
+                                    <br>
+                                    <input type="radio" name="ans" id="optc${index}" class="examRadio" value="c"> 
+                                    <label for="optc${index}">${q.option.c}</label>
+                                    <br>
+                                    <input type="radio" name="ans" id="optd${index}" class="examRadio" value="d"> 
+                                    <label for="optd${index}">${q.option.d}</label>
+                                    <input type="radio" name="hint" id="hintInput${index}" value="false" hidden> 
+                                    <br>
+                                </form>
                                 <br>
-                                <input type="radio" name="ans" id="optb${index}" class="examRadio" value="a"> 
-                                <label for="optb${index}">${q.option.b}</label>
-                                <br>
-                                <input type="radio" name="ans" id="optc${index}" class="examRadio" value="a"> 
-                                <label for="optc${index}">${q.option.c}</label>
-                                <br>
-                                <input type="radio" name="ans" id="optd${index}" class="examRadio" value="a"> 
-                                <label for="optd${index}">${q.option.d}</label>
-                                <br>
-                            </form>
-                            <br>
-
-                            <div class="w-50">
-                                <a onclick="prevQuestion(${index})" class="examA btn btn-outline-danger">Previous</a>
-                                <a onclick="nextQuestion(${index})" class="examA btn btn-outline-success">Next</a>
+        
+                                <div class="btns row">
+                                    <h4 onclick="prevQuestion(${index})" class="examA">Previous</h4>
+                                    <h4 onclick="nextQuestion(${index})" class="examA">Next</h4>
+                                    <h4 onclick="showHint(${index}, this)" class="examA">Show Hint</h4>
+                                </div>
+        
+                                <div id='hintDiv${index}' class='hintDiv hide'></div>
                             </div>
-                        </div>
+                        `;
+        
+                        examBody.innerHTML += newQuestion;
+                        
+                    }
+        
+                    var jumpTo = document.createElement('div');
+                    jumpTo.classList.add('jumpTo');
+                    
+                    for (let index = 0; index < data.length; index++) {
+                        
+                        jumpTo.innerHTML += `<button id="qNoBtn${index}" class="qNoBtn" onclick="jumpTo(${index})">${index+1}</button>`;
+                        
+                    }
+        
+                    examBody.appendChild(jumpTo);
+        
+                    document.querySelector('#q0').classList.remove('hide'); // this makes the first question visible
+                    examBody.innerHTML += `
+                        
+                        <button class="sExam" onclick="preSubmit()">Submit Exam</button>
+        
                     `;
-
-                    examBody.innerHTML += newQuestion;
-                    
+        
                 }
 
-                var jumpTo = document.createElement('div');
-                jumpTo.classList.add('jumpTo');
-                
-                for (let index = 0; index < data.length; index++) {
-                    
-                    jumpTo.innerHTML += `<button id="qNoBtn${index}" class="qNoBtn" onclick="jumpTo(${index})">${index+1}</button>`;
-                    
-                }
-
-                examBody.appendChild(jumpTo);
-
-                document.querySelector('#q0').classList.remove('hide'); // this makes the first question visible
-                examBody.innerHTML += `
-                    
-                    <button class="sExam" onclick="preSubmit()">Submit Exam</button>
-
-                `;
-
+            } else {
+                preloader.classList.add("hide");
+    
+                alert("Exams could not be loaded correctly, please try again")
             }
 
         }
@@ -836,7 +989,7 @@ function getHistory() {
                             var percentageScore = (data[index].score / 40) * 100;
                             percentageScore = percentageScore.toFixed(2);
 
-                            var percentageRating = (data[index].rating / 10) * 100;
+                            var percentageRating = (data[index].rating) * 1;
                             percentageRating = percentageRating.toFixed(2);
                             
                             historyBox.innerHTML += `
@@ -862,7 +1015,7 @@ function getHistory() {
                                     <div>
                                         <h4 class="AIsuggest">${data[index].AI_suggestions}</h4>
                                     </div>
-                                    <button class="takeExam" onclick="openUrl('../pages/exam.html?subject=${data[index].examName}')">Try an Exam</button>
+                                    <button class="takeExam" onclick="openUrl('exam.html?subject=${data[index].examName}')">Try an Exam</button>
                                 </div>        
 
                             `;
@@ -871,6 +1024,7 @@ function getHistory() {
 
                     } else {
                         // empty history page
+                        preloader.classList.add('hide');
 
                         historyBox.innerHTML += '<h4 class="errText">Oops! No Exams Yet Head on and take one.</h4>'
                     }
@@ -880,7 +1034,7 @@ function getHistory() {
                 })
 
         } else {
-            openUrl('../pages/register.html')
+            openUrl('register.html')
         }
     })
 

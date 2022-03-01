@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
+    <script src="https://kit.fontawesome.com/dc8ee980c4.js" crossorigin="anonymous"></script>
+    <title>ExamPadii | Profile Page</title>
+</head>
+<body>
+
+    <div class="navigbar" align="center">
+        <div class="navLinks">
+            <a href="index.html" class="navlink navheader">ExamPadii</a>
+            <!-- <a href="index.html" class="navlink">Home</a>
+            <a href="selection.html" class="navlink">Exams</a>
+            <a href="history.html" class="navlink">History</a>
+            <a href="aboutUs.html" class="navlink">About Us</a> -->
+        </div>
+        
+        <div class="navAcc">
+            <a href="register.html" class="navlink linkForm">Register</a>
+            <a href="login.html" class="navlink linkForm">Login</a>
+        </div>
+    </div>
+
+    <div class="profileContainer">
+        <div class="profileDetails">
+            <div class="profilePicture">
+                <img src="media/img/dp.webp" alt="Your profile picture">
+            </div>
+            <div class="profileSummary">
+                <h4 class="username">John Doe</h4>
+                <div class="starRating">
+                    <i class="stars-active fas fa-star"></i>
+                    <i class="stars-active fas fa-star"></i>
+                    <i class="stars-active fas fa-star"></i>
+                    <i class="stars-active fas fa-star"></i>
+                    <i class="stars fas fa-star"></i>
+                </div>
+                <div class="profileNavController">
+                    <div id="examsNav" onclick="switchNav('exams')" class="eachNavTab active-nav">
+                        <i class="eachNavIcon fas fa-bookmark"></i>
+                        <h4 class="eachNavText">Recent Exams</h4>
+                    </div>
+                    <div id="contactNav" onclick="switchNav('contact')" class="eachNavTab">
+                        <i class="eachNavIcon fas fa-address-book"></i>
+                        <h4 class="eachNavText">Contact</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr class="profileDivider">
+        <div class="profileSwitchableDiv">
+            <div id="examsHistoryNav" class="examsHistoryNav">
+                <div class="eachExamSummary">
+                    nothing to see yet
+                </div>
+                <div class="eachExamSummary">
+                    nothing to see yet
+                </div>
+                <div class="eachExamSummary">
+                    nothing to see yet
+                </div>
+                <div class="eachExamSummary">
+                    nothing to see yet
+                </div>
+                <div class="eachExamSummary">
+                    nothing to see yet
+                </div>
+            </div>
+            <div id="contactInfo" class="contactInfo hide">
+
+            </div>
+        </div>
+    </div>
+
+    <script src="js/animation.js"></script>
+    
+</body>
+</html>
