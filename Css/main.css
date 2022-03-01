@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&display=swap');
 
+html{
+    padding-bottom: 3rem;
+}
+
 *{
     box-sizing: border-box;
 	font-family: 'Poppins', sans-serif;
@@ -14,6 +18,7 @@
 .btn.blank{
     background-color: rgb(216, 146, 216);
     color: white;
+    padding: 1rem 4rem;
 }
 
 .btn-outline-secondary:hover{
@@ -35,11 +40,15 @@
 
 .navheader{
     font-weight: 600;
-    font-size: 20px;
+    font-size: 25px;
     padding: 15px;
     text-decoration: underline;
     text-decoration-color: rgb(216, 146, 216);
     text-decoration-thickness: 3px;
+}
+
+.navbar-nav{
+    padding-left: 20px;
 }
 
 .row{
@@ -59,6 +68,10 @@
 }
 
 .welcomeText{
+    font-size: 30px;
+}
+
+.headerText{
     font-size: 20px;
 }
 
@@ -70,7 +83,7 @@
     background-color: rgb(216, 146, 216);
     height: fit-content;
     padding: 100px 40px 60px 40px;
-    margin-top: -80px;
+    margin-top: -20px;
 }
 
 .thirdSec{
@@ -90,29 +103,29 @@
 .selectionContainer{
     margin: 50px 0px;
     height: fit-content;
-    padding: 40px 100px;
+    padding-top: 20px;
     background-color: whitesmoke;
-    width: fit-content;
+    /* width: min-content; */
     border-radius: 10px;
     border: 1px solid lavender;
     box-shadow: 0px 0px 3px lavender;
 }
 
 .subImg{
-    height: 80px;
-    width: 80px;
+    height: 50px;
+    width: 50px;
     margin: 0px 20px 0px 0px;
 }
 
 .subRow{
-    height: 120px;
+    height: 200px;
 }
 
 .subName{
     margin-right: 50px;
     font-weight: normal;
+    font-size: 16px;
 }
-
 
 .eachDev{
     height: fit-content;
@@ -172,11 +185,15 @@
     height: 700px;
 }
 
+td.logName{
+    padding-right: 2rem;
+}
+
 .formFieldset{
     padding: 40px;
     background-color: whitesmoke;
     border-width: 0px;
-    border-radius: 1px;
+    border-radius: 5px;
 }
 
 .formHeader{
@@ -221,54 +238,32 @@
     padding: 2rem 0 2rem;
     background-color: whitesmoke;
     height: max-content;
-    width: 40rem;
+    width: min-content;
+    font-size: 14px;
+    border-radius: 5px;
 }
 
 .regIcon{
     padding: 16px 0px 0px 43px;
     min-width: 50px;
     text-align: center;
+    color: rgb(216, 146, 216)
 }
 
 .regInput{
     height: 40px;
-    width: 17rem;
+    width: 10rem;
     border-color: rgb(216, 146, 216);
     border-style: groove;
     border-radius: 5px;
     margin: 5px 0px 5px 30px;
 }
 
-select.regSelect{
-    border-color: rgb(216, 146, 216);
-    width: fit-content;
-    height: 2rem;
-    margin: 0 5px 0 5px;
+.btn.auth{
+    background-color: rgb(216, 146, 216);
+    color: white;
+    padding: 7px 20px;   
 }
-
-
-@media screen and (max-width: 610px) {
-    /* SELECTION */
-    .selectionContainer{
-        margin: 50px 0px;
-        padding: 20px 45px;
-        width: min-content;
-    }
-
-    .subName{font-size: 16px;}
-    .btn-outline-secondary{font-size: 14px;}
-
-    /* INDEX */
-    .Oneimg{
-        width: 100%;
-        height: 300px;
-    }
-}
-
-
-
-
-
 
 
 
@@ -455,4 +450,91 @@ select.regSelect{
     background-color: rgb(216, 146, 216) !important;
     color: white;
     cursor: pointer;
+}
+
+
+@media screen and (min-width: 320px) {
+    .selectionContainer{
+        padding: 20px 10px;
+        width: min-content;
+    }
+    /* .Oneimg{
+        width: 100%;
+        height: 300px;
+    } */
+}
+
+@media screen and (min-width: 425px) {
+    .selectionContainer{
+        padding: 20px 30px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .selectionContainer{
+        padding: 20px 40px;
+        width: max-content;
+    }
+
+    .subName{
+        font-size: 20px;
+    }
+
+    .welcomeText{
+        font-size: 40px;
+    }
+
+
+    /* Registration */
+    .regForm{
+        width: max-content;
+        font-size: 16px;
+        padding-left: 5rem;
+        padding-right: 5rem;
+    }
+    
+    .regInput{
+        width: 17rem;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .carousel-item p{
+        padding-left: 5rem;
+        padding-right: 5rem;
+    }
+
+    .selectionContainer{
+        padding: 20px 100px;
+    }
+
+    .subImg{
+        height: 80px;
+        width: 80px;
+    }
+
+    .btn-outline-secondary{
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .welcomeText{
+        font-size: 60px;
+    }
+
+    .floatRight{
+        margin-left: 15rem;
+    }
+
+    .floatReg{
+        margin-left: -1rem;
+    }
+
+    .navbar-nav{
+        padding-left: 80px;
+    }
+
+    .nav-item{
+        padding-left: 20px;
+    }
 }
