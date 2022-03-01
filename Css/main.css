@@ -15,6 +15,22 @@ html{
     padding: 0px 50px !important;
 }
 
+<<<<<<< HEAD
+.navigbar{
+    height: 75px;
+    width: 100%;
+    background-color: white;
+    border-bottom: lavender 1px solid;
+    box-shadow: 0px 0px 5px lavender;
+    padding: 25px 0px;
+    
+    top: 0;
+}
+
+.navLinks{
+    float: left;
+    margin-top: -4px;
+=======
 .btn.blank{
     background-color: rgb(216, 146, 216);
     color: white;
@@ -23,6 +39,7 @@ html{
 
 .btn-outline-secondary:hover{
     background-color: rgb(216, 146, 216);
+>>>>>>> a3872272e20d38c92c7b3be18fbf65eb93bd05c8
 }
 
 .linkForm{
@@ -38,10 +55,29 @@ html{
     color: white;
 }
 
+<<<<<<< HEAD
+.navAcc{
+    clear: right;
+    text-align: right;
+    margin-right: 20px;
+}
+
+.navlink{
+    color: black;
+    text-decoration: none;
+    padding: 0px 20px;
+}
+
+.navheader{
+    font-weight: 600;
+    font-size: 20px;
+    padding-right: 55px !important;
+=======
 .navheader{
     font-weight: 600;
     font-size: 25px;
     padding: 15px;
+>>>>>>> a3872272e20d38c92c7b3be18fbf65eb93bd05c8
     text-decoration: underline;
     text-decoration-color: rgb(216, 146, 216);
     text-decoration-thickness: 3px;
@@ -54,7 +90,11 @@ html{
 .row{
     width: 100%;
     display: flex;
+<<<<<<< HEAD
+    padding: 10px;
+=======
     padding: 20px;
+>>>>>>> a3872272e20d38c92c7b3be18fbf65eb93bd05c8
     place-items: center;
 }
 
@@ -68,13 +108,28 @@ html{
 }
 
 .welcomeText{
+<<<<<<< HEAD
     font-size: 30px;
 }
 
 .headerText{
+=======
+<<<<<<< HEAD
+    margin-bottom: 25px;
     font-size: 20px;
 }
 
+.secondSec{
+    width: 70%;
+    margin: 0px;
+}
+
+=======
+>>>>>>> 9c7b4e4d7a041d72de0f9fbdd2e9f3faf2bd746a
+    font-size: 20px;
+}
+
+>>>>>>> a3872272e20d38c92c7b3be18fbf65eb93bd05c8
 .Secp{
     line-height: 1.5;
 }
@@ -92,6 +147,28 @@ html{
     padding: 10px 40px;
 }
 
+<<<<<<< HEAD
+.btn{
+    margin: 25px 0px;
+    background-color: rgb(216, 146, 216);
+    border: 0px;
+    height: 40px;
+    width: 150px;
+    font-size: 15px;
+    border-radius: 5px;
+}
+
+.btn >a{
+    text-decoration: none;
+    color: black;
+}
+
+.btn:hover{
+    opacity: .7;
+}
+
+=======
+>>>>>>> a3872272e20d38c92c7b3be18fbf65eb93bd05c8
 .topText{
     margin: 30px 0px 0px 0px;
 }
@@ -112,9 +189,18 @@ html{
 }
 
 .subImg{
+<<<<<<< HEAD
     height: 50px;
     width: 50px;
+=======
+    height: 80px;
+    width: 80px;
+<<<<<<< HEAD
+    margin:  0px 20px 0px 0px;
+=======
+>>>>>>> 9c7b4e4d7a041d72de0f9fbdd2e9f3faf2bd746a
     margin: 0px 20px 0px 0px;
+>>>>>>> a3872272e20d38c92c7b3be18fbf65eb93bd05c8
 }
 
 .subRow{
@@ -127,21 +213,115 @@ html{
     font-size: 16px;
 }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+.btnExamSelection{
+    height: fit-content;
+    width: fit-content;
+    padding: 10px;
+    border-radius: 5px;
+    border-color: rgb(216, 146, 216);
+    background-color: white;
+    border-width: 1px;
+}
+
+.btnExamSelection:hover{
+    background-color: rgb(216, 146, 216);
+    border-width: 1px;
+    color: white;
+}
+
+.aboutUsHead{
+    margin: 30px 0px;
+}
+
+.aboutUsHead > h1, .aboutUsHead > p{
+    font-weight: 400;
+}
+
+.aboutUscontainer{
+    height: fit-content;
+    width: 100%;
+    padding: 0px 0px 30px 0px;
+    position: relative;
+    overflow: hidden;
+    -webkit-transform: translate3d(0, 0, 0);
+}
+
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 4.5s;
+    animation-name: fade;
+    animation-duration: 4.5s;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    } 
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    } 
+    to {
+        opacity: 1
+    }
+}
+
+.sliderBody{
+    display: flex;
+}
+=======
+>>>>>>> a3872272e20d38c92c7b3be18fbf65eb93bd05c8
+
+>>>>>>> 9c7b4e4d7a041d72de0f9fbdd2e9f3faf2bd746a
 .eachDev{
     height: fit-content;
     margin: 40px 0px 10px 0px;
     text-align: center;
 }
 
+<<<<<<< HEAD
+.devImgDiv{
+    width: 100vw;
+}
+=======
+>>>>>>> a3872272e20d38c92c7b3be18fbf65eb93bd05c8
 
 .devImg{
     height: 200px;
     width: 175px;
 }
 
+<<<<<<< HEAD
+.devDetails{
+    font-weight: 400;
+    line-height: 1.5;
+    padding: 0px 10px;
+    margin: 0px 0px 10px 0px;
+}
+
+.devName{
+    font-weight: 600;
+    font-size: 20px;
+    color: black;
+    margin: 0px 0px 0px 0px;
+}
+
+.devStack{
+    color: #686666;
+    margin: 0px 0px 10px 0px;
+=======
 .devName{
     font-size: 22px;
     color: rgb(155, 18, 155);
+>>>>>>> a3872272e20d38c92c7b3be18fbf65eb93bd05c8
 }
 
 .socialIcons i{
@@ -213,6 +393,21 @@ td.logName{
     margin-right: 16rem;
 }
 
+<<<<<<< HEAD
+.inputForm{
+    height: 2rem;
+    width: 17rem;
+    border-color: rgb(216, 146, 216);
+    border-style: groove;
+    border-radius: 5px;
+}
+
+.inputForm:focus-visible{
+    border-color: rgb(216, 146, 216);
+}
+
+=======
+>>>>>>> a3872272e20d38c92c7b3be18fbf65eb93bd05c8
 .input-icons i {
     position: absolute;
 }
@@ -233,6 +428,43 @@ td.logName{
     height: 40px;
 }
 
+<<<<<<< HEAD
+.btnForm, .btnCancel{
+    height: 2.5rem;
+    width: 5.5rem;
+    border-radius: 5px;
+    margin: 1rem 0 1rem;
+}
+
+.btnForm{
+    background-color: rgb(216, 146, 216);
+    border-style: none;
+    color: white;
+}
+
+.btnCancel{
+    background-color: white;
+    color: black;
+    border-style: thin !important;
+    border-color: rgb(216, 146, 216);
+}
+
+.btnCancel a{
+    color: black;
+    text-decoration: none;
+}
+
+.btnForm:hover{
+    background-color: rgb(224, 195, 224);
+    border: thick;
+}
+
+.btnForm a{
+    text-decoration: none;
+}
+
+=======
+>>>>>>> a3872272e20d38c92c7b3be18fbf65eb93bd05c8
 .regForm{
     margin: 7rem 0rem 7rem 0rem;
     padding: 2rem 0 2rem;
@@ -259,14 +491,52 @@ td.logName{
     margin: 5px 0px 5px 30px;
 }
 
+<<<<<<< HEAD
 .btn.auth{
     background-color: rgb(216, 146, 216);
     color: white;
     padding: 7px 20px;   
+=======
+select.regSelect{
+    border-color: rgb(216, 146, 216);
+    width: fit-content;
+    height: 2rem;
+    margin: 0 5px 0 5px;
+}
+
+<<<<<<< HEAD
+=======
+
+@media screen and (max-width: 610px) {
+    /* SELECTION */
+    .selectionContainer{
+        margin: 50px 0px;
+        padding: 20px 45px;
+        width: min-content;
+    }
+
+    .subName{font-size: 16px;}
+    .btn-outline-secondary{font-size: 14px;}
+
+    /* INDEX */
+    .Oneimg{
+        width: 100%;
+        height: 300px;
+    }
+>>>>>>> 9c7b4e4d7a041d72de0f9fbdd2e9f3faf2bd746a
 }
 
 
 
+<<<<<<< HEAD
+=======
+
+
+
+
+
+>>>>>>> a3872272e20d38c92c7b3be18fbf65eb93bd05c8
+>>>>>>> 9c7b4e4d7a041d72de0f9fbdd2e9f3faf2bd746a
 .hidden{
     visibility: hidden;
 }
@@ -330,6 +600,22 @@ td.logName{
     margin: 0px 0px 10px 0px;
 }
 
+<<<<<<< HEAD
+.btns{
+    width: 100%;
+    place-content: flex-end;
+}
+
+.examA{
+    padding: 0px 30px 0px 0px;
+}
+
+.examA:hover{
+    cursor: pointer;
+}
+
+=======
+>>>>>>> a3872272e20d38c92c7b3be18fbf65eb93bd05c8
 #preloader{
     display: flex;
     place-content: center;
@@ -344,14 +630,32 @@ td.logName{
     background: rgb(216, 146, 216);
     color: white;
     float: right;
+<<<<<<< HEAD
+    margin-right: 50px;
+}
+
+.hintDiv{
+    height: fit-content;
+    width: 100%;
+    font-style: italic;
+    font-size: 15px;
+=======
     margin: 0 50px 20px 0;
+>>>>>>> a3872272e20d38c92c7b3be18fbf65eb93bd05c8
 }
 
 .sExam:hover{
     opacity: .6;
     cursor: pointer;
 }
+<<<<<<< HEAD
+.timer{
+    place-content: flex-end;
+    margin: 10px 0px 0px 0px;
+}
+=======
 
+>>>>>>> a3872272e20d38c92c7b3be18fbf65eb93bd05c8
 
 .timerText{
     font-size: 25px;
@@ -450,6 +754,7 @@ td.logName{
     background-color: rgb(216, 146, 216) !important;
     color: white;
     cursor: pointer;
+<<<<<<< HEAD
 }
 
 
@@ -537,4 +842,164 @@ td.logName{
     .nav-item{
         padding-left: 20px;
     }
+=======
+<<<<<<< HEAD
+}
+
+.modal {
+    display: none;
+    place-content: center;
+    place-items: center;
+    position: fixed;
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+/* Styles for the footer */
+footer {
+    height: fit-content;
+    width: 100%;
+    background-color: #686666;
+}
+
+.footerTopSect{
+    display: flex;
+}
+
+.footerLeft, .footerRight{
+    width: 50%;
+    padding-top: 30px;
+}
+
+.socialIconsFooter > i{
+    color: black;
+    font-size: 25px;
+    padding: 0px 0px 15px 20px;
+}
+
+.contact{
+    padding-left: 15px;
+}
+
+.contactItems, .aboutItems{
+    margin: 0px 0px 10px 0px;
+}
+
+.contactItems > a, .aboutItems > a{
+    font-weight: 300;
+}
+
+.footerRight{
+    text-align: right;
+    padding-right: 20px;
+}
+
+.footerBottomSect{
+    display: flex;
+    place-content: center;
+    place-items: center;
+    flex-direction: column;
+    padding-bottom: 30px;
+}
+
+.footerBottomSect > h4 {
+    font-size: 18px;
+    padding: 5px 0px;
+}
+
+.loveIcon{
+    color: red;
+}
+
+
+/* Profile Page design */
+.profileContainer{
+    padding: 40px 7vw 0px 7vw;
+}
+.profileDetails{
+    display: flex;
+    margin-bottom: 20px;
+    place-items: center;
+}
+.profilePicture{
+    border: 2px solid rgb(216, 146, 216);
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+    margin-right: 30px;
+}
+.profilePicture > img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+.profileNavController{
+    display: flex;
+}
+.username{
+    font-weight: normal;
+    margin-bottom: 5px;
+}
+.starRating{
+    margin-bottom: 10px;
+}
+.stars{
+    color: grey;
+}
+.stars-active{
+    color: gold;
+}
+.eachNavTab {
+    display: flex;
+    flex-direction: row;
+    margin: 0px 15px 0px 0px;
+    background-color: lightgrey;
+    padding: 5px 10px;
+    border-radius: 20px;
+    place-items: center;
+    transition: all .5s;
+}
+.active-nav{
+    color: white;
+    background-color: rgb(216, 146, 216);
+}
+.eachNavTab:hover{
+    background-color: rgb(216, 146, 216);
+    color: white;
+}
+.eachNavIcon{
+    font-size: 10px;
+    padding-right: 10px;
+}
+.eachNavText{
+    font-size: 15px;
+    font-weight: normal;
+}
+.profileSwitchableNav{
+    height: fit-content;
+    width: 100%;
+}
+.examsHistoryNav{
+    display: flex;
+    flex-wrap: wrap;
+}
+.eachExamSummary{
+    height: 350px;
+    width: 400px;
+    margin: 10px 15px;
+    border: 3px solid rgb(216, 146, 216);
+
+    /* remove this */
+    display: flex;
+    place-content: center;
+    place-items: center;
+=======
+>>>>>>> a3872272e20d38c92c7b3be18fbf65eb93bd05c8
+>>>>>>> 9c7b4e4d7a041d72de0f9fbdd2e9f3faf2bd746a
 }
