@@ -1,8 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&display=swap');
 
-html{
-    padding-bottom: 3rem;
-}
 
 *{
     box-sizing: border-box;
@@ -12,25 +9,11 @@ html{
 }
 
 .padLeft{
-    padding: 0px 50px !important;
+    padding-left: 50px !important;
+    padding-right: 50px !important;
+    padding-top: 100px !important;
 }
 
-<<<<<<< HEAD
-.navigbar{
-    height: 75px;
-    width: 100%;
-    background-color: white;
-    border-bottom: lavender 1px solid;
-    box-shadow: 0px 0px 5px lavender;
-    padding: 25px 0px;
-    
-    top: 0;
-}
-
-.navLinks{
-    float: left;
-    margin-top: -4px;
-=======
 .btn.blank{
     background-color: rgb(216, 146, 216);
     color: white;
@@ -39,7 +22,6 @@ html{
 
 .btn-outline-secondary:hover{
     background-color: rgb(216, 146, 216);
->>>>>>> a3872272e20d38c92c7b3be18fbf65eb93bd05c8
 }
 
 .linkForm{
@@ -55,29 +37,10 @@ html{
     color: white;
 }
 
-<<<<<<< HEAD
-.navAcc{
-    clear: right;
-    text-align: right;
-    margin-right: 20px;
-}
-
-.navlink{
-    color: black;
-    text-decoration: none;
-    padding: 0px 20px;
-}
-
-.navheader{
-    font-weight: 600;
-    font-size: 20px;
-    padding-right: 55px !important;
-=======
 .navheader{
     font-weight: 600;
     font-size: 25px;
     padding: 15px;
->>>>>>> a3872272e20d38c92c7b3be18fbf65eb93bd05c8
     text-decoration: underline;
     text-decoration-color: rgb(216, 146, 216);
     text-decoration-thickness: 3px;
@@ -90,12 +53,9 @@ html{
 .row{
     width: 100%;
     display: flex;
-<<<<<<< HEAD
-    padding: 10px;
-=======
     padding: 20px;
->>>>>>> a3872272e20d38c92c7b3be18fbf65eb93bd05c8
     place-items: center;
+    
 }
 
 .oneSec{
@@ -104,71 +64,35 @@ html{
 
 .Oneimg{
     width: 100%;
-    height: 500px;
+    height: 350px;
+    padding-bottom: 1rem;
 }
 
 .welcomeText{
-<<<<<<< HEAD
     font-size: 30px;
 }
 
 .headerText{
-=======
-<<<<<<< HEAD
-    margin-bottom: 25px;
     font-size: 20px;
 }
 
-.secondSec{
-    width: 70%;
-    margin: 0px;
-}
-
-=======
->>>>>>> 9c7b4e4d7a041d72de0f9fbdd2e9f3faf2bd746a
-    font-size: 20px;
-}
-
->>>>>>> a3872272e20d38c92c7b3be18fbf65eb93bd05c8
 .Secp{
     line-height: 1.5;
 }
 
-.purpleSec{
+.secondSec{
     background-color: rgb(216, 146, 216);
     height: fit-content;
-    padding: 100px 40px 60px 40px;
+    padding: 100px 40px;
     margin-top: -20px;
 }
 
 .thirdSec{
     margin: 30px 0px;
     text-align: center;
-    padding: 10px 40px;
+    padding: 100px 40px;
 }
 
-<<<<<<< HEAD
-.btn{
-    margin: 25px 0px;
-    background-color: rgb(216, 146, 216);
-    border: 0px;
-    height: 40px;
-    width: 150px;
-    font-size: 15px;
-    border-radius: 5px;
-}
-
-.btn >a{
-    text-decoration: none;
-    color: black;
-}
-
-.btn:hover{
-    opacity: .7;
-}
-
-=======
->>>>>>> a3872272e20d38c92c7b3be18fbf65eb93bd05c8
 .topText{
     margin: 30px 0px 0px 0px;
 }
@@ -189,22 +113,13 @@ html{
 }
 
 .subImg{
-<<<<<<< HEAD
     height: 50px;
     width: 50px;
-=======
-    height: 80px;
-    width: 80px;
-<<<<<<< HEAD
-    margin:  0px 20px 0px 0px;
-=======
->>>>>>> 9c7b4e4d7a041d72de0f9fbdd2e9f3faf2bd746a
     margin: 0px 20px 0px 0px;
->>>>>>> a3872272e20d38c92c7b3be18fbf65eb93bd05c8
 }
 
 .subRow{
-    height: 200px;
+    height: 210px;
 }
 
 .subName{
@@ -213,93 +128,19 @@ html{
     font-size: 16px;
 }
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-.btnExamSelection{
-    height: fit-content;
-    width: fit-content;
-    padding: 10px;
-    border-radius: 5px;
-    border-color: rgb(216, 146, 216);
-    background-color: white;
-    border-width: 1px;
-}
 
-.btnExamSelection:hover{
-    background-color: rgb(216, 146, 216);
-    border-width: 1px;
-    color: white;
-}
-
-.aboutUsHead{
-    margin: 30px 0px;
-}
-
-.aboutUsHead > h1, .aboutUsHead > p{
-    font-weight: 400;
-}
-
-.aboutUscontainer{
-    height: fit-content;
-    width: 100%;
-    padding: 0px 0px 30px 0px;
-    position: relative;
-    overflow: hidden;
-    -webkit-transform: translate3d(0, 0, 0);
-}
-
-.fade {
-    -webkit-animation-name: fade;
-    -webkit-animation-duration: 4.5s;
-    animation-name: fade;
-    animation-duration: 4.5s;
-}
-
-@-webkit-keyframes fade {
-    from {
-        opacity: .4
-    } 
-    to {
-        opacity: 1
-    }
-}
-
-@keyframes fade {
-    from {
-        opacity: .4
-    } 
-    to {
-        opacity: 1
-    }
-}
-
-.sliderBody{
-    display: flex;
-}
-=======
->>>>>>> a3872272e20d38c92c7b3be18fbf65eb93bd05c8
-
->>>>>>> 9c7b4e4d7a041d72de0f9fbdd2e9f3faf2bd746a
 .eachDev{
     height: fit-content;
     margin: 40px 0px 10px 0px;
     text-align: center;
 }
 
-<<<<<<< HEAD
-.devImgDiv{
-    width: 100vw;
-}
-=======
->>>>>>> a3872272e20d38c92c7b3be18fbf65eb93bd05c8
 
 .devImg{
     height: 200px;
     width: 175px;
 }
 
-<<<<<<< HEAD
 .devDetails{
     font-weight: 400;
     line-height: 1.5;
@@ -317,11 +158,6 @@ html{
 .devStack{
     color: #686666;
     margin: 0px 0px 10px 0px;
-=======
-.devName{
-    font-size: 22px;
-    color: rgb(155, 18, 155);
->>>>>>> a3872272e20d38c92c7b3be18fbf65eb93bd05c8
 }
 
 .socialIcons i{
@@ -393,7 +229,6 @@ td.logName{
     margin-right: 16rem;
 }
 
-<<<<<<< HEAD
 .inputForm{
     height: 2rem;
     width: 17rem;
@@ -406,8 +241,6 @@ td.logName{
     border-color: rgb(216, 146, 216);
 }
 
-=======
->>>>>>> a3872272e20d38c92c7b3be18fbf65eb93bd05c8
 .input-icons i {
     position: absolute;
 }
@@ -428,7 +261,6 @@ td.logName{
     height: 40px;
 }
 
-<<<<<<< HEAD
 .btnForm, .btnCancel{
     height: 2.5rem;
     width: 5.5rem;
@@ -463,8 +295,6 @@ td.logName{
     text-decoration: none;
 }
 
-=======
->>>>>>> a3872272e20d38c92c7b3be18fbf65eb93bd05c8
 .regForm{
     margin: 7rem 0rem 7rem 0rem;
     padding: 2rem 0 2rem;
@@ -491,52 +321,12 @@ td.logName{
     margin: 5px 0px 5px 30px;
 }
 
-<<<<<<< HEAD
 .btn.auth{
     background-color: rgb(216, 146, 216);
     color: white;
     padding: 7px 20px;   
-=======
-select.regSelect{
-    border-color: rgb(216, 146, 216);
-    width: fit-content;
-    height: 2rem;
-    margin: 0 5px 0 5px;
 }
 
-<<<<<<< HEAD
-=======
-
-@media screen and (max-width: 610px) {
-    /* SELECTION */
-    .selectionContainer{
-        margin: 50px 0px;
-        padding: 20px 45px;
-        width: min-content;
-    }
-
-    .subName{font-size: 16px;}
-    .btn-outline-secondary{font-size: 14px;}
-
-    /* INDEX */
-    .Oneimg{
-        width: 100%;
-        height: 300px;
-    }
->>>>>>> 9c7b4e4d7a041d72de0f9fbdd2e9f3faf2bd746a
-}
-
-
-
-<<<<<<< HEAD
-=======
-
-
-
-
-
->>>>>>> a3872272e20d38c92c7b3be18fbf65eb93bd05c8
->>>>>>> 9c7b4e4d7a041d72de0f9fbdd2e9f3faf2bd746a
 .hidden{
     visibility: hidden;
 }
@@ -600,7 +390,6 @@ select.regSelect{
     margin: 0px 0px 10px 0px;
 }
 
-<<<<<<< HEAD
 .btns{
     width: 100%;
     place-content: flex-end;
@@ -614,8 +403,6 @@ select.regSelect{
     cursor: pointer;
 }
 
-=======
->>>>>>> a3872272e20d38c92c7b3be18fbf65eb93bd05c8
 #preloader{
     display: flex;
     place-content: center;
@@ -630,7 +417,6 @@ select.regSelect{
     background: rgb(216, 146, 216);
     color: white;
     float: right;
-<<<<<<< HEAD
     margin-right: 50px;
 }
 
@@ -639,23 +425,16 @@ select.regSelect{
     width: 100%;
     font-style: italic;
     font-size: 15px;
-=======
-    margin: 0 50px 20px 0;
->>>>>>> a3872272e20d38c92c7b3be18fbf65eb93bd05c8
 }
 
 .sExam:hover{
     opacity: .6;
     cursor: pointer;
 }
-<<<<<<< HEAD
 .timer{
     place-content: flex-end;
     margin: 10px 0px 0px 0px;
 }
-=======
-
->>>>>>> a3872272e20d38c92c7b3be18fbf65eb93bd05c8
 
 .timerText{
     font-size: 25px;
@@ -754,7 +533,6 @@ select.regSelect{
     background-color: rgb(216, 146, 216) !important;
     color: white;
     cursor: pointer;
-<<<<<<< HEAD
 }
 
 
@@ -763,10 +541,6 @@ select.regSelect{
         padding: 20px 10px;
         width: min-content;
     }
-    /* .Oneimg{
-        width: 100%;
-        height: 300px;
-    } */
 }
 
 @media screen and (min-width: 425px) {
@@ -776,6 +550,15 @@ select.regSelect{
 }
 
 @media screen and (min-width: 768px) {
+    .subRow{
+        height: 100px;
+    }
+
+    .Oneimg{
+        width: 70%;
+        height: 500px;
+    }
+
     .selectionContainer{
         padding: 20px 40px;
         width: max-content;
@@ -804,6 +587,15 @@ select.regSelect{
 }
 
 @media screen and (min-width: 1024px) {
+    .subRow{
+        height: 150px;
+    }
+
+    .Oneimg{
+        width: 90%;
+        height: 500px;
+    }
+
     .carousel-item p{
         padding-left: 5rem;
         padding-right: 5rem;
@@ -828,11 +620,17 @@ select.regSelect{
     }
 
     .floatRight{
-        margin-left: 15rem;
+        margin-left: 10rem;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 0px;
+        padding-right: 20px;
+        border-radius: 10px;
+        background-color: rgb(216, 146, 216);
     }
 
     .floatReg{
-        margin-left: -1rem;
+        margin-left: 1rem;
     }
 
     .navbar-nav{
@@ -842,8 +640,6 @@ select.regSelect{
     .nav-item{
         padding-left: 20px;
     }
-=======
-<<<<<<< HEAD
 }
 
 .modal {
@@ -865,6 +661,17 @@ footer {
     height: fit-content;
     width: 100%;
     background-color: #686666;
+    color: white;
+    font-size: 14px;
+}
+
+p a{
+    text-decoration: none;
+    color: rgb(216, 146, 216);
+}
+
+p a:hover{
+    color: rgb(216, 146, 216); 
 }
 
 .footerTopSect{
@@ -877,7 +684,7 @@ footer {
 }
 
 .socialIconsFooter > i{
-    color: black;
+    color: white;
     font-size: 25px;
     padding: 0px 0px 15px 20px;
 }
@@ -908,7 +715,7 @@ footer {
 }
 
 .footerBottomSect > h4 {
-    font-size: 18px;
+    font-size: 14px !important;
     padding: 5px 0px;
 }
 
@@ -955,7 +762,7 @@ footer {
 .stars-active{
     color: gold;
 }
-.eachNavTab {
+.eachNav {
     display: flex;
     flex-direction: row;
     margin: 0px 15px 0px 0px;
@@ -994,12 +801,4 @@ footer {
     width: 400px;
     margin: 10px 15px;
     border: 3px solid rgb(216, 146, 216);
-
-    /* remove this */
-    display: flex;
-    place-content: center;
-    place-items: center;
-=======
->>>>>>> a3872272e20d38c92c7b3be18fbf65eb93bd05c8
->>>>>>> 9c7b4e4d7a041d72de0f9fbdd2e9f3faf2bd746a
 }
