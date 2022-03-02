@@ -115,7 +115,7 @@ function openUrl(destination) {
     var endUrlRegex = /.*\//;
     const windowUrl = window.location.href.match(endUrlRegex, '')[0];
 
-    // redirects to login page
+    // redirects to desired page
     window.open(`${windowUrl}${destination}`, '_self');
 
 }
@@ -268,7 +268,7 @@ if (signUpForm != undefined && signUpForm != null) {
                         signUpForm.reset();
 
                         // redirect to maybe another page, the _self means open in current tab
-                        openUrl('index.html');
+                        openUrl('../index.html');
 
                     })
                     .catch(err => {
@@ -349,7 +349,7 @@ if (logInForm != undefined && logInForm != null) {
                 // var email = userObject.email;
 
                 // redirect to maybe another page, the _self means open in current tab
-                openUrl('index.html');
+                openUrl('../index.html');
 
             })
             .catch(err => {
