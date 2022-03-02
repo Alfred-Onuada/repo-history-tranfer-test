@@ -196,8 +196,7 @@ if (signUpForm != undefined && signUpForm != null) {
         submitBtn.textContent = "Processing...";
         submitBtn.disabled = true;
 
-        var dateOfBirth = signUpForm.elements['BirthDay'].value.toString() + '-' + signUpForm.elements['BirthdayMonth'].value.toString() + '-' + signUpForm.elements['BirthdayYear'].value.toString();
-
+        var dateOfBirth = signUpForm.elements['BirthDay'].value.toString();
         var data = { 'email': email.value, 'password': password.value, 'confirmPassword': confirmPassword.value };
 
         err = validate(data);
